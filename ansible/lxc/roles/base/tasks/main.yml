@@ -1,0 +1,3 @@
+#- include: provision_ansible.yml
+- include: packages.yml
+- include: etc_hosts.yml

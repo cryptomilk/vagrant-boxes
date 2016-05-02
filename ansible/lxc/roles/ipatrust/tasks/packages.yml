@@ -1,0 +1,5 @@
+- dnf: pkg={{item}} state=installed
+  with_items:
+      - freeipa-server-trust-ad
+      - samba-client
+      - krb5-workstation

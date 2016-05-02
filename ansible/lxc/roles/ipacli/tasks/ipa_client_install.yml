@@ -1,0 +1,4 @@
+- command: ipa-client-install -U --domain {{ ipacli_domain }} -w {{ ipacli_password }} -p admin@{{ipacli_realm}} --force-join
+  args:
+      creates: /etc/krb5.keytab
+

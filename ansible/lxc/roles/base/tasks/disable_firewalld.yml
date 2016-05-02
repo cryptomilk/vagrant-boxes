@@ -1,0 +1,2 @@
+- service: name=firewalld state=stopped
+- service: name=firewalld enabled=no

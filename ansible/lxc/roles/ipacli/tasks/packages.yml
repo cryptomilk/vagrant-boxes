@@ -1,0 +1,3 @@
+- dnf: pkg={{item}} state=installed
+  with_items:
+      - freeipa-client

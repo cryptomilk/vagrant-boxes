@@ -1,0 +1,19 @@
+[libdefaults]
+        default_realm = {{ smbdc_realm }}
+        dns_lookup_realm = false
+        dns_lookup_kdc = true
+        ticket_lifetime = 24h
+        forwardable = yes
+        allow_weak_crypto = yes
+
+[realms]
+        {{ smbdc_realm }} = {
+                kdc = 192.168.122.10:88
+                admin_server = 192.168.122.10:88
+                default_domain = samba.site
+        }
+        {{ smbdc_netbios }} = {
+                kdc = 192.168.122.10:88
+                admin_server = 192.168.122.10:88
+                default_domain = samba.site
+        }

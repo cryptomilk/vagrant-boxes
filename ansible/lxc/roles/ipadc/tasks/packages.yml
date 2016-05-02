@@ -1,0 +1,5 @@
+- dnf: pkg={{item}} state=installed
+  with_items:
+    - freeipa-server
+    - freeipa-server-dns
+    - bind-dyndb-ldap

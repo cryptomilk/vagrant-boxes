@@ -1,0 +1,7 @@
+- file: path=/etc/samba/smb.conf state=absent
+- template: src=krb5.conf.samba dest=/etc/krb5.conf.d/samba_ad_dc
+- command: samba-tool domain provision --realm={{ smbdc_realm }} --domain={{ smbdc_netbios }} --adminpass={{ smbdc_password }} --server-role=dc --use-rfc2307
+  args:
+      creates: /etc/samba/smb.conf
+- service: name=samba state=started
+- service: name=samba enabled=yes

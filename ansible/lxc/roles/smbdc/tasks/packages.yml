@@ -1,0 +1,5 @@
+- command: /usr/bin/dnf -y copr enable asn/samba_ad_dc
+- dnf: pkg={{item}} state=installed
+  with_items:
+      - samba-dc
+      - samba-client

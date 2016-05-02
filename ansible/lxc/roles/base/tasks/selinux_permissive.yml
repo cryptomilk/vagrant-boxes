@@ -1,0 +1,7 @@
+- name: Install packages required for Ansible's SELinux management
+  dnf: pkg={{item}} state=installed
+  with_items:
+      - libselinux-python
+
+- name: permissive selinux
+  selinux: policy=targeted state=permissive

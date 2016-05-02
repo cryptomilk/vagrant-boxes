@@ -1,0 +1,22 @@
+README
+
+Install vagrant-lxc
+
+virsh
+------
+
+<network>
+  <name>default</name>
+  <uuid>f89899e0-08cd-43af-9f0b-a1731ea5e268</uuid>
+  <forward mode='nat'/>
+  <bridge name='virbr0' stp='on' delay='0'/>
+  <mac address='52:54:00:75:cd:f5'/>
+  <domain name='vnet.site' localOnly='no'/>
+  <ip address='192.168.122.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.122.100' end='192.168.122.254'/>
+      <host mac='00:16:3e:8a:18:16' name='smbdc.samba.site' ip='192.168.122.10'/>
+      <host mac='00:16:3e:8a:18:17' name='ipadc.ipa.site' ip='192.168.122.20'/>
+    </dhcp>
+  </ip>
+</network>

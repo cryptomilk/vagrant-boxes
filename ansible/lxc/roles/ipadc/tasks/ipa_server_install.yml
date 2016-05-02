@@ -1,0 +1,3 @@
+- command: ipa-server-install -U -r {{ ipadc_realm }} -n {{ ipadc_domain }} -p {{ ipadc_password }} -a {{ ipadc_password }} --setup-dns --forwarder={{ ipadc_forwarder }}
+  args:
+      creates: /etc/dirsrv/slapd-{{ ipadc_realm|replace(".","-") }}

@@ -1,0 +1,2 @@
+- command: ipa-adtrust-install -U --netbios-name={{ ipadc_trust_netbios }} --add-sids -a {{ ipadc_password }}
+- shell: echo {{ ipadc_trust_password }} | ipa trust-add {{ ipadc_trust_realm }} --admin={{ ipadc_trust_admin }}

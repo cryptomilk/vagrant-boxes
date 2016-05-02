@@ -1,0 +1,4 @@
+# Only needed for virtual machines, not for containers
+- dnf: pkg=haveged state=installed
+- service: name=haveged state=started
+- service: name=haveged enabled=yes

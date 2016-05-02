@@ -1,0 +1,4 @@
+- dnf: pkg={{item}} state=installed
+  with_items:
+      - tmux
+      - mc

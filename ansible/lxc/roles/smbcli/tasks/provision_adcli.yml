@@ -1,0 +1,5 @@
+- shell: echo {{ smbcli_password }} | kinit Administrator@{{smbcli_realm}}; realm join --client-software=winbind {{ smbcli_realm }}
+  args:
+      creates: /etc/krb5.keytab
+- service: name=winbind state=started
+- service: name=winbind enabled=yes

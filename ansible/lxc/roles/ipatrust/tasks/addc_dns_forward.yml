@@ -1,0 +1,4 @@
+- shell: echo {{ ipadc_password }} | kinit admin@{{ ipadc_realm }}
+- command: ipa dnsforwardzone-add {{ ipadc_trust_domain }} --forwarder={{ ipadc_trust_forwarder }} --forward-policy=only
+  args:
+      creates: 

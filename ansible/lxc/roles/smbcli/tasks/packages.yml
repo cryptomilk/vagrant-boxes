@@ -1,0 +1,12 @@
+- dnf: pkg={{item}} state=installed
+  with_items:
+      - krb5-workstation
+      - polkit
+      - adcli
+      - realmd
+      - oddjob
+      - oddjob-mkhomedir
+      - samba-winbind
+      - samba-winbind-clients
+      - samba-common-tools
+      - samba-client

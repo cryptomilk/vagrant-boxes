@@ -1,0 +1,4 @@
+- include: packages.yml
+- include: resolv_conf.yml
+- include: hostname.yml
+- include: ipa_client_install.yml

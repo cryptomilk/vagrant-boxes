@@ -1,0 +1,42 @@
+---
+
+- name: SAMBA DC
+  hosts: smbdc
+  become: True
+  become_user: root
+  become_method: sudo
+
+  roles:
+      - base
+      - smbdc
+
+- name: SAMBA CLIENT
+  hosts: smbcli
+  become: True
+  become_user: root
+  become_method: sudo
+
+  roles:
+      - base
+      - smbcli
+
+- name: IPA DC
+  hosts: ipadc
+  become: True
+  become_user: root
+  become_method: sudo
+
+  roles:
+      - base
+      - ipadc
+      - ipatrust
+
+- name: IPA CLIENT
+  hosts: ipacli
+  become: True
+  become_user: root
+  become_method: sudo
+
+  roles:
+      - base
+      - ipacli
