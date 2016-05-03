@@ -20,3 +20,14 @@ virsh
     </dhcp>
   </ip>
 </network>
+
+lxc config
+-----------
+
+/etc/lxc/default.conf:
+
+lxc.network.type = veth
+lxc.network.link = virbr0
+lxc.network.flags = up
+lxc.network.hwaddr = 00:16:3e:xx:xx:xx
+
